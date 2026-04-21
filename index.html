@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern AI-based rehabilitation app for guided recovery and progress tracking">
+  <title>Rehab AI - AI-Powered Rehabilitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-pastel">
+  <div class="app-container">
+    <!-- Background Decorations -->
+    <div class="bg-decorations">
+      <div class="bg-blob bg-blob-1 animate-float"></div>
+      <div class="bg-blob bg-blob-2 animate-float-delayed"></div>
+      <div class="bg-blob bg-blob-3 animate-float-slow"></div>
+      <div class="bg-grid"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-decoration-1 animate-float"></div>
+      <div class="sidebar-decoration-2 animate-float-delayed"></div>
+
+      <!-- Logo -->
+      <div class="sidebar-logo">
+        <div class="logo-container">
+          <div class="logo-icon">
+            <div class="logo-icon-bg animate-glow">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <svg class="logo-sparkle animate-bounce-soft" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg class="logo-star animate-wiggle" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <h1>Rehab AI</h1>
+            <p>Your wellness journey</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-id="dashboard">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="9"></rect>
+              <rect x="14" y="3" width="7" height="5"></rect>
+              <rect x="14" y="12" width="7" height="9"></rect>
+              <rect x="3" y="16" width="7" height="5"></rect>
+            </svg>
+            <span class="active-dot">
+              <span class="active-dot-ping"></span>
+              <span class="active-dot-solid"></span>
+            </span>
+          </div>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-id="exercises">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6.5 6.5 11 11"></path>
+              <path d="m21 21-1-1"></path>
+              <path d="m3 3 1 1"></path>
+              <path d="m18 22 4-4"></path>
+              <path d="m2 6 4-4"></path>
+              <path d="m3 10 7-7"></path>
+              <path d="m14 21 7-7"></path>
+            </svg>
+          </div>
+          <span>Exercises</span>
+        </button>
+        <button class="nav-item" data-id="calendar">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <span>Calendar</span>
+        </button>
+        <button class="nav-item" data-id="progress">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+          </div>
+          <span>Progress</span>
+        </button>
+        <button class="nav-item" data-id="feedback">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <span>Feedback</span>
+        </button>
+      </nav>
+
+      <!-- Upgrade Card -->
+      <div class="sidebar-upgrade">
+        <div class="upgrade-header">
+          <div class="upgrade-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <span>Pro Plan</span>
+        </div>
+        <p>Unlock AI-powered insights and personalized plans</p>
+        <button class="btn btn-primary btn-sm btn-full">Upgrade Now</button>
+      </div>
+
+      <!-- Collapse Button -->
+      <div class="sidebar-collapse">
+        <button id="sidebar-collapse-btn" class="collapse-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>Collapse</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-decoration"></div>
+
+      <!-- Search -->
+      <div class="header-search">
+        <div class="search-container">
+          <div class="search-glow"></div>
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="search-input" placeholder="Search exercises, sessions...">
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="header-right">
+        <!-- Streak Badge -->
+        <div class="streak-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-pulse-soft">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>7 Day Streak</span>
+          <span style="font-size: 1.125rem;">🔥</span>
+        </div>
+
+        <!-- Notifications -->
+        <div class="dropdown" id="notification-dropdown">
+          <button id="notification-btn" class="notification-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-badge">
+              <span class="notification-badge-ping"></span>
+              <span class="notification-badge-count">3</span>
+            </span>
+            <span class="sr-only">Notifications</span>
+          </button>
+          <div class="dropdown-content notification-dropdown">
+            <div class="dropdown-label">
+              <div class="icon-bg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span>Notifications</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item">
+              <div class="item-icon" style="background: linear-gradient(135deg, rgba(110, 231, 183, 0.2) 0%, rgba(110, 231, 183, 0.1) 100%);">
+                <span class="emoji">⏰</span>
+              </div>
+              <div class="item-content">
+                <span class="item-title">Exercise Reminder</span>
+                <p class="item-description">Time for your morning stretches!</p>
+                <span class="item-time" style="color: var(--primary-dark);">2 min ago</span>
+              </div>
+            </button>
+            <button class="dropdown-item">
+              <div class="item-icon" style="background: linear-gradient(135deg, rgba(147, 197, 253, 0.2) 0%, rgba(147, 197, 253, 0.1) 100%);">
+                <span class="emoji">🏆</span>
+              </div>
+              <div class="item-content">
+                <span class="item-title">New Achievement!</span>
+                <p class="item-description">You completed 7 days streak!</p>
+                <span class="item-time" style="color: var(--accent-dark);">1 hour ago</span>
+              </div>
+            </button>
+            <button class="dropdown-item">
+              <div class="item-icon" style="background: linear-gradient(135deg, rgba(221, 214, 254, 0.2) 0%, rgba(221, 214, 254, 0.1) 100%);">
+                <span class="emoji">📈</span>
+              </div>
+              <div class="item-content">
+                <span class="item-title">Progress Update</span>
+                <p class="item-description">Recovery is 5% ahead of schedule</p>
+                <span class="item-time" style="color: var(--secondary-foreground);">3 hours ago</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- User Profile -->
+        <div class="dropdown user-dropdown" id="user-dropdown">
+          <button id="user-profile-btn" class="user-profile-btn">
+            <div class="avatar-container">
+              <div class="avatar">JD</div>
+              <span class="avatar-status">
+                <span class="avatar-status-inner"></span>
+              </span>
+            </div>
+            <div class="user-info">
+              <p class="name">John Doe</p>
+              <div class="status">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="8" width="18" height="4" rx="1" ry="1"></rect>
+                  <path d="M12 8v13"></path>
+                  <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+                  <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path>
+                </svg>
+                <p>Week 3 Recovery</p>
+              </div>
+            </div>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-label" style="padding: 8px 12px;">
+              <span style="font-size: 0.875rem;">My Account</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item" style="padding: 12px 16px;">Profile</button>
+            <button class="dropdown-item" style="padding: 12px 16px;">Settings</button>
+            <button class="dropdown-item" style="padding: 12px 16px;">Help Center</button>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item danger" style="padding: 12px 16px; color: var(--destructive);">Sign Out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="main-inner">
+        <!-- Page Title Section -->
+        <div class="page-title-section">
+          <div class="live-badge">
+            <span class="live-indicator">
+              <span class="live-indicator-ping"></span>
+              <span class="live-indicator-solid"></span>
+            </span>
+            <span>Live Dashboard</span>
+          </div>
+
+          <div class="page-title-row">
+            <div class="page-icon">
+              <div class="page-icon-bg">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-pulse-soft">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="m4.93 4.93 1.41 1.41"></path>
+                  <path d="m17.66 17.66 1.41 1.41"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                  <path d="m6.34 17.66-1.41 1.41"></path>
+                  <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+              </div>
+              <svg class="page-icon-heart animate-bounce-soft" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <div class="page-title">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <h1>Good morning, John!</h1>
+                <div class="title-icons">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-wiggle">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" class="animate-pulse-soft">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <p>Track your rehabilitation progress and stay on schedule. You're doing amazing!</p>
+            </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="quick-stats">
+            <div class="quick-stat streak">
+              <span class="emoji">🔥</span>
+              <div>
+                <p class="stat-label">7 Day Streak</p>
+                <p class="stat-sublabel">Keep it up!</p>
+              </div>
+            </div>
+            <div class="quick-stat level">
+              <span class="emoji">⭐</span>
+              <div>
+                <p class="stat-label">Level 5</p>
+                <p class="stat-sublabel">Recovery Pro</p>
+              </div>
+            </div>
+            <div class="quick-stat badges">
+              <span class="emoji">🏆</span>
+              <div>
+                <p class="stat-label">12 Badges</p>
+                <p class="stat-sublabel">Earned</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+          <!-- AI Recommendation Card -->
+          <div class="card ai-card col-span-full">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+            <div class="floating-emoji floating-emoji-1 animate-bounce-soft">🤖</div>
+            <div class="floating-emoji floating-emoji-2 animate-float">✨</div>
+
+            <div class="card-header">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div class="card-icon">
+                    <div class="card-icon-bg animate-pulse-soft">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 0v10l4 4"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                    </div>
+                    <svg class="card-icon-sparkle animate-wiggle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <h2 class="card-title">AI Recommendation</h2>
+                      <span class="live-badge" style="margin-bottom: 0; padding: 4px 12px;">
+                        <span class="live-indicator">
+                          <span class="live-indicator-ping"></span>
+                          <span class="live-indicator-solid"></span>
+                        </span>
+                        <span style="font-size: 0.75rem;">Live</span>
+                      </span>
+                    </div>
+                    <p class="card-subtitle">Personalized for your recovery</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="suggestion-box">
+                <div class="suggestion-header">
+                  <div class="suggestion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="9" y1="18" x2="15" y2="18"></line>
+                      <line x1="10" y1="22" x2="14" y2="22"></line>
+                      <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+                    </svg>
+                  </div>
+                  <div style="flex: 1;">
+                    <div class="suggestion-title">
+                      <h4>Today's AI Suggestion</h4>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-pulse-soft" style="color: var(--accent);">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                    </div>
+                    <p class="suggestion-text">
+                      Based on your progress and yesterday's feedback, I recommend starting with gentle
+                      <span class="highlight-primary">stretching exercises</span>
+                      followed by
+                      <span class="highlight-accent">low-impact mobility work</span>.
+                      Your pain levels have improved 15% this week!
+                    </p>
+                    <div class="quick-stats-row">
+                      <div class="stat-pill primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>25 min session</span>
+                      </div>
+                      <div class="stat-pill accent">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <line x1="12" y1="8" x2="12" y2="12"></line>
+                          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <span>3 exercises</span>
+                      </div>
+                      <div class="stat-pill secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                          <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                        <span>Easy intensity</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="exercise-preview-grid">
+                <div class="exercise-preview-item">
+                  <span class="emoji">🧘</span>
+                  <h5>Neck Stretches</h5>
+                  <p>5 min</p>
+                </div>
+                <div class="exercise-preview-item">
+                  <span class="emoji">💪</span>
+                  <h5>Shoulder Rolls</h5>
+                  <p>8 min</p>
+                </div>
+                <div class="exercise-preview-item">
+                  <span class="emoji">🦵</span>
+                  <h5>Hip Mobility</h5>
+                  <p>12 min</p>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-lg btn-full">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Start AI-Recommended Session
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Streak Card -->
+          <div class="card streak-card col-span-2">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+            <div class="floating-fire animate-bounce-soft">🔥</div>
+
+            <div class="card-content" style="padding-top: 24px;">
+              <div class="streak-display">
+                <div class="streak-number-row">
+                  <div class="streak-flame" style="position: relative;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" class="animate-pulse-soft">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                    <svg class="streak-sparkle animate-wiggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; right: -8px; top: -4px;">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <span class="streak-number">7</span>
+                </div>
+                <h3>Day Streak!</h3>
+                <p>You're on fire! Keep it going!</p>
+              </div>
+
+              <div class="week-progress">
+                <div class="week-day">
+                  <div class="week-day-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                  </div>
+                  <span class="week-day-label completed">M</span>
+                </div>
+                <div class="week-day">
+                  <div class="week-day-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                  </div>
+                  <span class="week-day-label completed">T</span>
+                </div>
+                <div class="week-day">
+                  <div class="week-day-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                  </div>
+                  <span class="week-day-label completed">W</span>
+                </div>
+                <div class="week-day">
+                  <div class="week-day-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                  </div>
+                  <span class="week-day-label completed">T</span>
+                </div>
+                <div class="week-day">
+                  <div class="week-day-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                  </div>
+                  <span class="week-day-label completed">F</span>
+                </div>
+                <div class="week-day">
+                  <div class="week-day-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                  </div>
+                  <span class="week-day-label completed">S</span>
+                </div>
+                <div class="week-day">
+                  <div class="week-day-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                    </svg>
+                  </div>
+                  <span class="week-day-label completed">S</span>
+                </div>
+              </div>
+
+              <div class="achievement-stats">
+                <div class="achievement-stat gold">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                    <path d="M4 22h16"></path>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                  </svg>
+                  <p>Best: 14 days</p>
+                </div>
+                <div class="achievement-stat purple">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <p>Level 5</p>
+                </div>
+                <div class="achievement-stat primary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                  <p>+23%</p>
+                </div>
+              </div>
+
+              <div class="motivation-message">
+                <div class="motivation-content">
+                  <div class="motivation-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  </div>
+                  <div class="motivation-text">
+                    <h5>Amazing Progress!</h5>
+                    <p>
+                      You've completed exercises for 7 days straight! Just 3 more days to unlock the
+                      <span class="badge-name">"10 Day Champion"</span>
+                      badge!
+                    </p>
+                  </div>
+                  <div class="motivation-zap animate-pulse-soft">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Card -->
+          <div class="card progress-card col-span-full">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+            <div class="floating-target animate-bounce-soft" style="position: absolute; right: 32px; top: 32px; font-size: 3.75rem; opacity: 0.2;">🎯</div>
+
+            <div class="card-header">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div class="card-icon">
+                    <div class="card-icon-bg">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                      </svg>
+                    </div>
+                    <svg class="card-icon-sparkle animate-wiggle" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" style="color: var(--accent);">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="card-title">Recovery Progress</h2>
+                    <p class="card-subtitle">Keep going, you're amazing!</p>
+                  </div>
+                </div>
+                <div class="live-badge" style="margin-bottom: 0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary-dark);">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                  <span style="font-weight: 700; color: var(--primary-dark);">+5% this week</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="progress-stats">
+                <div class="progress-number">
+                  <span>68%</span>
+                  <svg class="sparkle animate-pulse-soft" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; right: -24px; top: 0; color: var(--accent);">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <span class="progress-label">completed</span>
+              </div>
+
+              <div class="progress-bar-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 68%;"></div>
+                </div>
+              </div>
+
+              <div class="milestones">
+                <div class="milestone">
+                  <div class="milestone-circle completed">
+                    <span class="emoji">🏆</span>
+                  </div>
+                  <span class="milestone-label completed">Week 1</span>
+                </div>
+                <div class="milestone">
+                  <div class="milestone-circle completed">
+                    <span class="emoji">⭐</span>
+                  </div>
+                  <span class="milestone-label completed">Week 2</span>
+                </div>
+                <div class="milestone">
+                  <div class="milestone-circle current">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <span class="current-indicator">
+                      <span class="active-dot-ping"></span>
+                      <span class="active-dot-solid" style="width: 16px; height: 16px;"></span>
+                    </span>
+                  </div>
+                  <span class="milestone-label current">Week 3</span>
+                </div>
+                <div class="milestone">
+                  <div class="milestone-circle upcoming">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                  </div>
+                  <span class="milestone-label upcoming">Week 4</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exercise Video Card -->
+          <div class="card exercise-card col-span-full">
+            <div class="card-decoration card-decoration-1 animate-float-slow"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+
+            <div class="card-header">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div class="card-icon">
+                    <div class="card-icon-bg" style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 50%, var(--secondary) 100%);">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m6.5 6.5 11 11"></path>
+                        <path d="m21 21-1-1"></path>
+                        <path d="m3 3 1 1"></path>
+                        <path d="m18 22 4-4"></path>
+                        <path d="m2 6 4-4"></path>
+                        <path d="m3 10 7-7"></path>
+                        <path d="m14 21 7-7"></path>
+                      </svg>
+                    </div>
+                    <svg class="card-icon-sparkle animate-pulse-soft" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" style="position: absolute; right: -4px; bottom: -4px; color: var(--destructive);">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="card-title">Today's Exercise</h2>
+                    <p class="card-subtitle">Personalized for you</p>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; border-radius: 9999px; background: rgba(221, 214, 254, 0.2); padding: 6px 12px;">
+                  <span style="font-size: 0.875rem; font-weight: 700; color: var(--secondary-foreground);">Beginner</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="video-player">
+                <div class="blob-1 animate-float"></div>
+                <div class="blob-2 animate-float-delayed"></div>
+                <div class="blob-3 animate-float-slow"></div>
+                <div class="floating-emoji emoji-1 animate-float">💪</div>
+                <div class="floating-emoji emoji-2 animate-float-delayed">🧘</div>
+                <div class="floating-emoji emoji-3 animate-float-slow">✨</div>
+
+                <div class="video-center">
+                  <div class="play-button">
+                    <div class="ping-ring"></div>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                  <span class="video-label">Click to play video</span>
+                </div>
+
+                <div class="video-badge duration">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>15:30</span>
+                </div>
+
+                <div class="video-badge calories">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-pulse-soft">
+                    <path d="M12 2c.5 2.5 2.5 4 4 6 1.5 2 1.5 5-1 7-1.5 1.5-4 2-6 1-1-.5-2-1.5-2.5-3 0 1.5.5 3 2 4.5 1.5 1.5 3.5 2 5.5 1.5 3-1 5-4 4-7-.5-2-2-3.5-3.5-5s-2-3-2.5-5z"></path>
+                  </svg>
+                  <span>120 cal</span>
+                </div>
+              </div>
+
+              <div class="exercise-title">
+                <h3>Shoulder Mobility Routine</h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-wiggle" style="color: var(--accent);">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <p class="exercise-description">Gentle exercises to improve range of motion and reduce stiffness</p>
+
+              <div class="exercise-stats">
+                <div class="exercise-stat time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>15 minutes</span>
+                </div>
+                <div class="exercise-stat count">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m6.5 6.5 11 11"></path>
+                    <path d="m21 21-1-1"></path>
+                    <path d="m3 3 1 1"></path>
+                    <path d="m18 22 4-4"></path>
+                    <path d="m2 6 4-4"></path>
+                    <path d="m3 10 7-7"></path>
+                    <path d="m14 21 7-7"></path>
+                  </svg>
+                  <span>8 exercises</span>
+                </div>
+                <div class="exercise-stat difficulty">
+                  <span style="font-size: 1.125rem;">🎯</span>
+                  <span>Easy</span>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-lg btn-full">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Start Exercise
+              </button>
+            </div>
+          </div>
+
+          <!-- Daily Tasks Card -->
+          <div class="card daily-card col-span-2">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+
+            <div class="card-header">
+              <div class="tasks-header">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div class="card-icon">
+                    <div class="card-icon-bg" style="background: linear-gradient(135deg, var(--secondary) 0%, rgba(147, 197, 253, 0.5) 50%, rgba(110, 231, 183, 0.5) 100%);">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                      </svg>
+                    </div>
+                    <svg class="card-icon-sparkle animate-wiggle" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" style="position: absolute; right: -4px; top: -4px; color: var(--accent);">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="card-title">Daily Tasks</h2>
+                    <p class="card-subtitle">Complete your routine</p>
+                  </div>
+                </div>
+                <div class="tasks-progress">
+                  <div class="tasks-progress-bar">
+                    <div id="tasks-progress-fill" class="tasks-progress-fill" style="width: 40%;"></div>
+                  </div>
+                  <div class="tasks-count">
+                    <span id="tasks-current-count" class="current">2</span>
+                    <span class="total">/ 5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div id="tasks-container" class="tasks-list">
+                <!-- Tasks will be rendered by JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar Card -->
+          <div class="card calendar-card">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+
+            <div class="card-header">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div class="card-icon">
+                    <div class="card-icon-bg" style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 50%, var(--secondary) 100%); height: 48px; width: 48px;">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                    </div>
+                  </div>
+                  <h2 class="card-title" style="font-size: 1.125rem;">Schedule</h2>
+                </div>
+                <div class="calendar-nav">
+                  <button id="prev-month-btn" class="calendar-nav-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <span id="calendar-month" class="calendar-month">Apr 2026</span>
+                  <button id="next-month-btn" class="calendar-nav-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="calendar-weekdays">
+                <div class="calendar-weekday">S</div>
+                <div class="calendar-weekday">M</div>
+                <div class="calendar-weekday">T</div>
+                <div class="calendar-weekday">W</div>
+                <div class="calendar-weekday">T</div>
+                <div class="calendar-weekday">F</div>
+                <div class="calendar-weekday">S</div>
+              </div>
+
+              <div id="calendar-days" class="calendar-days">
+                <!-- Calendar days will be rendered by JavaScript -->
+              </div>
+
+              <div class="calendar-legend">
+                <div class="legend-item">
+                  <div class="legend-color today"></div>
+                  <span class="legend-label">Today</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color scheduled"></div>
+                  <span class="legend-label">Scheduled</span>
+                </div>
+              </div>
+
+              <div class="calendar-stats">
+                <div class="calendar-stat">
+                  <p class="calendar-stat-value primary">12</p>
+                  <p class="calendar-stat-label">Sessions</p>
+                </div>
+                <div class="calendar-divider"></div>
+                <div class="calendar-stat">
+                  <p class="calendar-stat-value accent">8</p>
+                  <p class="calendar-stat-label">Completed</p>
+                </div>
+                <div class="calendar-divider"></div>
+                <div class="calendar-stat">
+                  <p class="calendar-stat-value secondary">4</p>
+                  <p class="calendar-stat-label">Upcoming</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reminders Card -->
+          <div class="card reminders-card">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+
+            <div class="card-header">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div class="card-icon">
+                    <div class="card-icon-bg" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%); height: 48px; width: 48px;">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                      </svg>
+                    </div>
+                    <svg class="card-icon-sparkle animate-wiggle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; right: -4px; top: -4px; color: var(--accent);">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="card-title" style="font-size: 1.125rem;">Reminders</h2>
+                    <p class="card-subtitle" style="font-size: 0.75rem;">Stay on track</p>
+                  </div>
+                </div>
+                <div class="reminders-header-right">
+                  <span>3 pending</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="reminders-list">
+                <div class="reminder-item upcoming" style="background: linear-gradient(135deg, rgba(110, 231, 183, 0.25) 0%, rgba(110, 231, 183, 0.05) 100%);">
+                  <div class="reminder-icon" style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);">
+                    <span class="emoji">🏋️</span>
+                    <span class="indicator">
+                      <span class="active-dot-ping" style="width: 12px; height: 12px;"></span>
+                      <span class="active-dot-solid" style="width: 12px; height: 12px;"></span>
+                    </span>
+                  </div>
+                  <div class="reminder-info">
+                    <p class="reminder-title">Morning Exercises</p>
+                    <div class="reminder-time">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span>8:00 AM</span>
+                      <span class="reminder-badge">Next up</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reminder-item done" style="background: linear-gradient(135deg, rgba(221, 214, 254, 0.3) 0%, rgba(221, 214, 254, 0.1) 100%);">
+                  <div class="reminder-icon" style="background: linear-gradient(135deg, var(--secondary) 0%, rgba(147, 197, 253, 0.5) 100%);">
+                    <span class="emoji">💊</span>
+                    <span class="check-mark">✓</span>
+                  </div>
+                  <div class="reminder-info">
+                    <p class="reminder-title done">Take Medication</p>
+                    <div class="reminder-time">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span>9:00 AM</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reminder-item upcoming" style="background: linear-gradient(135deg, rgba(147, 197, 253, 0.25) 0%, rgba(147, 197, 253, 0.05) 100%);">
+                  <div class="reminder-icon" style="background: linear-gradient(135deg, var(--accent) 0%, rgba(110, 231, 183, 0.5) 100%);">
+                    <span class="emoji">💧</span>
+                  </div>
+                  <div class="reminder-info">
+                    <p class="reminder-title">Hydration Check</p>
+                    <div class="reminder-time">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span>10:30 AM</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reminder-item later" style="background: linear-gradient(135deg, rgba(110, 231, 183, 0.2) 0%, rgba(147, 197, 253, 0.1) 100%);">
+                  <div class="reminder-icon" style="background: linear-gradient(135deg, rgba(110, 231, 183, 0.8) 0%, var(--secondary) 100%);">
+                    <span class="emoji">🧘</span>
+                  </div>
+                  <div class="reminder-info">
+                    <p class="reminder-title">Afternoon Stretches</p>
+                    <div class="reminder-time">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span>2:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reminder-item later" style="background: linear-gradient(135deg, rgba(199, 210, 254, 0.5) 0%, rgba(221, 214, 254, 0.3) 100%);">
+                  <div class="reminder-icon" style="background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);">
+                    <span class="emoji">🌙</span>
+                  </div>
+                  <div class="reminder-info">
+                    <p class="reminder-title">Evening Medication</p>
+                    <div class="reminder-time">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span>8:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback Card -->
+          <div class="card feedback-card col-span-2">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+            <div class="floating-heart-1 animate-float">💚</div>
+            <div class="floating-heart-2 animate-float-delayed">💜</div>
+
+            <div class="card-header">
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <div class="card-icon">
+                  <div class="card-icon-bg" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  </div>
+                  <svg class="card-icon-sparkle animate-bounce-soft" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" style="position: absolute; right: -4px; top: -4px; color: var(--accent);">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="card-title">Daily Check-in</h2>
+                  <p class="card-subtitle">How are you feeling today?</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="mood-section">
+                <label class="mood-label">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  Select your mood
+                </label>
+                <div class="mood-options">
+                  <button class="mood-option" data-index="0">
+                    <span class="mood-emoji">😄</span>
+                    <span class="mood-name">Great</span>
+                  </button>
+                  <button class="mood-option" data-index="1">
+                    <span class="mood-emoji">🙂</span>
+                    <span class="mood-name">Good</span>
+                  </button>
+                  <button class="mood-option" data-index="2">
+                    <span class="mood-emoji">😐</span>
+                    <span class="mood-name">Okay</span>
+                  </button>
+                  <button class="mood-option" data-index="3">
+                    <span class="mood-emoji">😕</span>
+                    <span class="mood-name">Meh</span>
+                  </button>
+                  <button class="mood-option" data-index="4">
+                    <span class="mood-emoji">😣</span>
+                    <span class="mood-name">Bad</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="feedback-input-section">
+                <label class="feedback-label">
+                  <span style="font-size: 1.125rem;">✨</span>
+                  Share more about your day
+                </label>
+                <div class="feedback-textarea-container">
+                  <textarea id="feedback-textarea" class="feedback-textarea" placeholder="How did your exercises feel? Any pain or discomfort?..."></textarea>
+                  <div id="feedback-char-count" class="feedback-char-count">0/500</div>
+                </div>
+              </div>
+
+              <button id="feedback-submit-btn" class="btn btn-primary btn-lg btn-full">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Submit Check-in
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Comments Card -->
+          <div class="card comments-card col-span-2">
+            <div class="card-decoration card-decoration-1 animate-float"></div>
+            <div class="card-decoration card-decoration-2 animate-float-delayed"></div>
+
+            <div class="card-header">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div class="card-icon">
+                    <div class="card-icon-bg" style="background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 50%, var(--primary) 100%);">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <svg class="card-icon-sparkle animate-pulse-soft" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" style="position: absolute; right: -4px; bottom: -4px; color: var(--destructive);">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="card-title">Notes & Comments</h2>
+                    <p class="card-subtitle">Track your journey</p>
+                  </div>
+                </div>
+                <button id="add-note-btn" class="add-note-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  Add Note
+                </button>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div id="add-comment-box" class="add-comment-box hidden">
+                <textarea id="comment-textarea" class="add-comment-textarea" placeholder="Add a note about your recovery journey..."></textarea>
+                <div class="add-comment-actions">
+                  <button id="cancel-comment-btn" class="btn btn-ghost btn-sm">Cancel</button>
+                  <button id="save-comment-btn" class="btn btn-primary btn-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    Save Note
+                  </button>
+                </div>
+              </div>
+
+              <div id="comments-container" class="comments-list">
+                <!-- Comments will be rendered by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Motivation -->
+        <div class="footer-motivation">
+          <div class="footer-quote">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-pulse-soft">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>"Every step forward is a step toward recovery"</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
