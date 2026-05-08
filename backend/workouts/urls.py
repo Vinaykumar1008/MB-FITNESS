@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import get_workouts
+from .views import workout_list_create, workout_detail
 
 urlpatterns = [
-    path('', get_workouts),
+    path('', workout_list_create),
+    path('<int:pk>/', workout_detail),
 ]

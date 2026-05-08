@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import get_feedbacks
+from .views import feedback_list_create, feedback_detail
 
 urlpatterns = [
-    path('', get_feedbacks),
+    path('', feedback_list_create),
+    path('<int:pk>/', feedback_detail),
 ]
