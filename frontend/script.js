@@ -141,7 +141,32 @@ function toggleDropdown(dropdown) {
 function closeAllDropdowns() {
   document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
 }
+async function fetchExercises() {
+  try {
+    const response = await fetch("http://127.0.0.1:8000/api/exercises/", {
+      headers: {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc4NTczNzczLCJpYXQiOjE3Nzg1NzM0NzMsImp0aSI6IjJlZGNjZDliODRlYzRiMDY5ZjJkZmQzYTVhMTA5Yzg2IiwidXNlcl9pZCI6IjMifQ.xzoauCM45DUWku1A-1zhDvsgY_pwzLZPCK1hj58knFo"
+      }
+    });
 
+    const data = await response.json();
+
+    console.log(data);
+
+    state.exercises = (data.results || data).map(exercise =>({
+      id: exercise.id,
+      name: exercise.name,
+      duration: `${exercise.reps} reps`,
+      completed: false,
+      emoji: "💪"
+    }));
+
+    renderTasks();
+
+  } catch (error) {
+    console.log("Error fetching exercises:", error);
+  }
+}
 // Tasks
 function renderTasks() {
   const completedCount = state.exercises.filter(ex => ex.completed).length;
@@ -451,7 +476,7 @@ function initEventListeners() {
 
 function init() {
   initEventListeners();
-  renderTasks();
+  fetchExercises();
   renderCalendar();
   renderComments();
   
